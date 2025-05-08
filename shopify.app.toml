@@ -3,7 +3,7 @@
 client_id = "f954ee78be9897570e05fb26d2555986"
 name = "3DLogistiX Integration"
 handle = "3dlogistix-integration"
-application_url = "https://risk-labour-consent-sacramento.trycloudflare.com"
+application_url = "https://seemed-upload-usually-briefs.trycloudflare.com"
 embedded = true
 
 [build]
@@ -21,15 +21,19 @@ api_version = "2025-04"
   topics = [ "app/scopes_update" ]
   uri = "/webhooks/app/scopes_update"
 
+  [[webhooks.subscriptions]]
+  topics = [ "orders/create" ]
+  uri = "arn:aws:events:ap-southeast-2::event-source/aws.partner/shopify.com/247142842369/shopify_testing"
+
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+scopes = "write_products, read_orders"
 
 [auth]
 redirect_urls = [
-  "https://risk-labour-consent-sacramento.trycloudflare.com/auth/callback",
-  "https://risk-labour-consent-sacramento.trycloudflare.com/auth/shopify/callback",
-  "https://risk-labour-consent-sacramento.trycloudflare.com/api/auth/callback"
+  "https://seemed-upload-usually-briefs.trycloudflare.com/auth/callback",
+  "https://seemed-upload-usually-briefs.trycloudflare.com/auth/shopify/callback",
+  "https://seemed-upload-usually-briefs.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
