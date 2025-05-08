@@ -3,7 +3,7 @@
 client_id = "f954ee78be9897570e05fb26d2555986"
 name = "3DLogistiX Integration"
 handle = "3dlogistix-integration"
-application_url = "https://seemed-upload-usually-briefs.trycloudflare.com"
+application_url = "https://reverse-val-anime-chicks.trycloudflare.com"
 embedded = true
 
 [build]
@@ -27,13 +27,13 @@ api_version = "2025-04"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products, read_orders"
+scopes = "read_products, write_products, read_orders"
 
 [auth]
 redirect_urls = [
-  "https://seemed-upload-usually-briefs.trycloudflare.com/auth/callback",
-  "https://seemed-upload-usually-briefs.trycloudflare.com/auth/shopify/callback",
-  "https://seemed-upload-usually-briefs.trycloudflare.com/api/auth/callback"
+  "https://reverse-val-anime-chicks.trycloudflare.com/auth/callback",
+  "https://reverse-val-anime-chicks.trycloudflare.com/auth/shopify/callback",
+  "https://reverse-val-anime-chicks.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
