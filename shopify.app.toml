@@ -3,7 +3,7 @@
 client_id = "f954ee78be9897570e05fb26d2555986"
 name = "3DLogistiX Integration"
 handle = "3dlogistix-integration"
-application_url = "https://reverse-val-anime-chicks.trycloudflare.com"
+application_url = "https://api.3dlwms.com/dev/inventory/shopify/app"
 embedded = true
 
 [build]
@@ -43,9 +43,8 @@ scopes = "read_products, write_products, read_orders, read_inventory, write_inve
 
 [auth]
 redirect_urls = [
-  "https://reverse-val-anime-chicks.trycloudflare.com/auth/callback",
-  "https://reverse-val-anime-chicks.trycloudflare.com/auth/shopify/callback",
-  "https://reverse-val-anime-chicks.trycloudflare.com/api/auth/callback"
+  "https://api.3dlwms.com/dev/inventory/shopify/auth",
+  "https://api.3dlwms.com/dev/inventory/shopify/auth/callback",
 ]
 
 [pos]
