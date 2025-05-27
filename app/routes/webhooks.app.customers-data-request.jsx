@@ -8,7 +8,7 @@ export const action = async ({ request }) => {
   // For GDPR data request webhooks, we need to return a specific JSON response
   if (topic === "customers/data_request") {
     // Use the request ID from the payload
-    const requestId = payload.data_request.id;
+    const requestId = `${payload.shop_domain}-${payload.customer.email}-${Date.now()}`;
 
     // Set a reasonable completion time (10 days from now)
     const tenDaysFromNow = new Date();
@@ -20,7 +20,11 @@ export const action = async ({ request }) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(payload),
+      body: JSON.stringify({
+        ...payload,
+        requestId,
+        estimatedCompletionTime: tenDaysFromNow.getTime(),
+      }),
     });
 
     return new Response(

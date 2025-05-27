@@ -31,7 +31,7 @@ api_version = "2025-04"
 
   [[webhooks.subscriptions]]
   compliance_topics = [ "customers/data_request" ]
-  uri = "https://api.3dlwms.com/dev/order/shopifywebhooks/customers/data_request"
+  uri = "/webhooks/customers/data_request"
 
   [[webhooks.subscriptions]]
   compliance_topics = [ "shop/redact" ]
