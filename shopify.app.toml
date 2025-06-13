@@ -3,7 +3,7 @@
 client_id = "f954ee78be9897570e05fb26d2555986"
 name = "3DLogistiX Integration"
 handle = "3dlogistix-integration"
-application_url = "https://api.3dlwms.com/dev/inventory/shopify/app"
+application_url = "https://api-dev.3dlwms.com/inventory/shopify/app"
 embedded = true
 
 [build]
@@ -15,7 +15,7 @@ api_version = "2025-04"
 
   [[webhooks.subscriptions]]
   topics = [ "app/uninstalled" ]
-  uri = "https://api.3dlwms.com/dev/order/shopifywebhooks/app/uninstalled"
+  uri = "https://api-dev.3dlwms.com/order/shopifywebhooks/app/uninstalled"
 
   [[webhooks.subscriptions]]
   topics = [ "app/scopes_update" ]
@@ -27,15 +27,15 @@ api_version = "2025-04"
 
   [[webhooks.subscriptions]]
   compliance_topics = [ "customers/redact" ]
-  uri = "https://api.3dlwms.com/dev/order/shopifywebhooks/customers/redact"
+  uri = "https://api-dev.3dlwms.com/order/shopifywebhooks/customers/redact"
 
   [[webhooks.subscriptions]]
   compliance_topics = [ "customers/data_request" ]
-  uri = "https://api.3dlwms.com/dev/order/shopifywebhooks/customers/data_request"
+  uri = "https://api-dev.3dlwms.com/order/shopifywebhooks/customers/data_request"
 
   [[webhooks.subscriptions]]
   compliance_topics = [ "shop/redact" ]
-  uri = "https://api.3dlwms.com/dev/order/shopifywebhooks/shop/redact"
+  uri = "https://api-dev.3dlwms.com/order/shopifywebhooks/shop/redact"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
@@ -43,8 +43,8 @@ scopes = "read_products, write_products, read_orders, read_inventory, write_inve
 
 [auth]
 redirect_urls = [
-  "https://api.3dlwms.com/dev/inventory/shopify/auth",
-  "https://api.3dlwms.com/dev/inventory/shopify/auth/callback",
+  "https://api-dev.3dlwms.com/inventory/shopify/auth",
+  "https://api-dev.3dlwms.com/inventory/shopify/auth/callback",
 ]
 
 [pos]
