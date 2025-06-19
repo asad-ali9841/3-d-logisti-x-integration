@@ -4,7 +4,7 @@ client_id = "f954ee78be9897570e05fb26d2555986"
 name = "3DLogistiX Integration"
 handle = "3dlogistix-integration"
 application_url = "https://api-dev.3dlwms.com/inventory/shopify/app"
-embedded = true
+embedded = false
 
 [build]
 include_config_on_deploy = true
