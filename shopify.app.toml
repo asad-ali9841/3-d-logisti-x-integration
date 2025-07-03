@@ -26,6 +26,10 @@ api_version = "2025-04"
   uri = "arn:aws:events:ap-southeast-2::event-source/aws.partner/shopify.com/247142842369/shopify_testing"
 
   [[webhooks.subscriptions]]
+  topics = [ "orders/updated" ]
+  uri = "https://api-dev.3dlwms.com/commonauth/salesorder/shopifyupdate"
+
+  [[webhooks.subscriptions]]
   compliance_topics = [ "customers/redact" ]
   uri = "https://api-dev.3dlwms.com/commonauth/shopifywebhooks/customers/redact"
 
@@ -39,7 +43,7 @@ api_version = "2025-04"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "read_products, write_products, read_orders, read_inventory, write_inventory, read_locations"
+scopes = "read_products, write_products, read_orders, read_fulfillments, read_shipping, read_inventory, write_inventory, read_locations"
 
 [auth]
 redirect_urls = [
